@@ -1,0 +1,192 @@
+body{
+    padding: 0;
+    margin: 0;
+    background-image: url('./img/background.JPG');
+}
+*{
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+.navbar{
+    position: fixed;
+    z-index: 999;
+    top: 0px;
+    left: 0px;
+    padding: 20px 5%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0px 0px 14px rgba(0,0,0,0.5);
+    background: #f3f4f6;
+    width:100%;
+    height: 5em;
+}
+.navbar .head{
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #424144;
+    border-bottom: 3px solid #db0e0e;
+    padding: 1px;
+}
+strong{
+    color: #db0e0e;
+}
+.menu{
+    display: absolute;
+    z-index: 1;
+}
+.navbar .menu li{
+    display: inline-block;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #424144;
+    margin-left: 30px;
+    list-style: none;
+}
+.navbar .menu li a{
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all 0,5s;
+    color: #424144;
+}
+.navbar .menu li a:hover{
+    font-size: 1.4rem;
+    border-bottom: 3px solid #db0e59;
+}
+.navbar .active{
+    border-bottom: 3px solid #db0e0e;
+}
+#toggle{
+    display: none;
+    position: absolute;
+}
+.bar{
+    display: none;
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.div{
+    width: 25px;
+    height: 4px;
+    background-color: #424144;
+    margin: 3px;
+    border-radius: 3px;
+}
+main{
+    display: flex;
+}
+.form{
+    background-color: #fae3e3;
+    width: 25rem;
+    height: 25rem;
+    padding: 25px;
+    margin: 150px auto 0;
+}
+.login{
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: rgb(42, 38, 38);
+    text-align: center;
+}
+.login span{
+    border-bottom: 4px solid #e482a2;
+    padding: 8px 16px;
+}
+input[type="text"] {
+    margin-top: 40px;
+    padding: 5px;
+    width: 100%;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: rgb(42, 38, 38);
+}
+input[type="password"] {
+    margin-top: 20px;
+    padding: 5px;
+    width: 100%;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: rgb(42, 38, 38);
+}
+.button button{
+    margin-top: 20px;
+    padding: 8px;
+    width: 100%;
+    border-radius: 15px;
+    font-size: 1rem;
+    color: white;
+    background-color:#e482a2;
+    border: 1px solid red;
+}
+.forget{
+    margin-top: 20px;
+    width: 100%;
+    font-size: 1rem;
+    color: rgb(42, 38, 38);
+    text-align: center;
+}
+.up,a{
+    margin-top: 20px;
+    width: 100%;
+    font-size: 1rem;
+    color: rgb(42, 38, 38);
+    text-align: center;
+}
+@media screen and (max-width:860px){
+    .menu{
+        position: fixed;
+        margin: 0;
+        z-index: -1;
+        left: 0;
+        right: 0;
+        top: 5em;
+        bottom:100%;
+        background: #f3f4f6;;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow: hidden;
+        transition: all .5s ease-in-out;
+    }
+    .menu li{
+        margin-top: 50px;;
+    }
+    .menu a{
+        font-size: 20px;
+        color:#f3f4f6;
+    }
+    .menu a:hover{
+        font-size: 1.4rem;
+    }
+    #toggle{
+        position: absolute;
+    }
+.bar{
+        display: block;
+    }  
+    nav :checked ~ .menu {
+        bottom: 0;
+    }
+    nav :checked ~ .bar .div:nth-child(1){
+        transform: translateY(5px) rotate(225deg);
+    }
+    nav :checked ~ .bar .div:nth-child(2){
+        opacity: 0;
+    }
+    nav :checked ~ .bar .div:nth-child(3){
+        transform: translateY(-10px) rotate(-225deg);
+    }
+    main{
+        padding: 50px;
+    }
+    .form{
+        background-color: #fae3e3;
+        width: 25rem;
+        height: 25rem;
+        padding: 25px;
+    }
+}
