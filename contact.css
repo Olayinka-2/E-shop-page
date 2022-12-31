@@ -7,12 +7,23 @@ body{
     box-sizing: border-box;
     font-family: sans-serif;
 }
+*{
+    font-family: sans-serif;
+    box-sizing: border-box;
+    color:#424144;
+}
+header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+}
 .navbar{
     position: fixed;
     z-index: 999;
     top: 0px;
     left: 0px;
-    padding: 20px 5%;
+    padding: 0px 5%;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -21,21 +32,31 @@ body{
     box-shadow: 0px 0px 14px rgba(0,0,0,0.5);
     background: #f3f4f6;
     width:100%;
-    height: 5em;
+    height: 6rem;
 }
 .navbar .head{
-    font-size: 1.3rem;
+    font-size: 2rem;
     font-weight: bold;
     color: #424144;
-    border-bottom: 3px solid #db0e0e;
-    padding: 1px;
-}
-strong{
-    color: #db0e0e;
+    /* border-bottom: 3px solid #db0e0e; */
+    /* padding: 1px; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 6rem;
+    background:#ff0844 ;
+    background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color:transparent;
 }
 .menu{
-    display: absolute;
-    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 6rem;
 }
 .navbar .menu li{
     display: inline-block;
@@ -50,10 +71,20 @@ strong{
     text-transform: capitalize;
     transition: all 0,5s;
     color: #424144;
+} 
+.navbar .menu li:last-child a {
+    background: rgba(66, 65, 68,0.3);
+    padding: 1rem;
+    border-radius: 50%;
+}
+.navbar .menu li:last-child a i{
+    font-size: 1.4rem;
+    color: #db0e0e;
 }
 .navbar .menu li a:hover{
     font-size: 1.4rem;
     border-bottom: 3px solid #db0e0e;
+    border: none;
 }
 .navbar .active{
     border-bottom: 3px solid #db0e0e;
@@ -143,6 +174,76 @@ main{
     font-weight: bold;
     background-color:#e4e8f0 ;
 }
+footer{
+    background: #f3f4f6;
+    width: 100%;
+    position: relative;
+    top: 5rem;
+}
+.footer-div{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 6rem 5% 0;
+}
+.footer-section{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.div1,.div2,.footer-social{
+    line-height: 2rem;
+}
+.div1 h2{
+    font-size: 2rem;
+    font-weight: bold;
+    color: #424144;
+    background:#ff0844 ;
+    background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color:transparent;
+}
+.div1 p{
+    font-size: 1.1rem;
+}
+.div2 h2{
+    font-size: 2rem;
+}
+.div2 li,a{
+    list-style: none;
+    font-size: 1.1rem;
+    text-decoration: none;
+}
+.footer-social h2{
+    font-size: 2rem;
+}
+.footer-social li{
+    list-style: none;
+    padding: 1.5rem;
+    background: rgba(66, 65, 68,0.3);
+    display: inline-block;
+    margin-left: 2rem;
+    border-radius: 50%;
+}
+.footer-social li i{
+    color: blue;
+    font-size: 1.5rem;
+}
+
+footer .last p{
+    text-align: center;
+    line-height:10vh;
+    font-size: 1.2rem;
+}
+footer .last p a{
+    text-decoration: none;
+    color: #db0e0e;
+    font-weight: bold;
+}
+
+
+
 @media screen and (max-width:860px){
     .menu{
         position: fixed;
@@ -150,8 +251,8 @@ main{
         z-index: -1;
         left: 0;
         right: 0;
-        top: 5em;
-        bottom:100%;
+        top: -100px;
+        bottom:0;
         background: #f3f4f6;;
         display: flex;
         flex-direction: column;
@@ -176,7 +277,8 @@ main{
         display: block;
     }  
     nav :checked ~ .menu {
-        bottom: 0;
+        top: 6rem;
+        height: 60vh;
     }
     nav :checked ~ .bar .div:nth-child(1){
         transform: translateY(5px) rotate(225deg);
@@ -188,59 +290,9 @@ main{
         transform: translateY(-10px) rotate(-225deg);
     }
     main{
-        margin-top: 5em 20px;
+        padding: 50px;
     }
-    .para{
-        font-size: 2rem;
-        white-space: nowrap;
+    .footer-div{
+        display: block;
     }
-    .sen{
-        font-size: 1.1rem;
-    }
-    .name{
-        width: 30vw;
-    }
-    .inputs input{
-        width: 45vw;
-    }
-    .text{
-        width: 45vw;
-    }
-    /* main{
-        padding: 5em;
-    }
-    .container2{
-        display: flex;
-        flex-direction: column;
-        width: 60vw;
-    } */
-    /* .name{
-        font-size: 1.1rem;
-        text-align: left;
-        color: white;
-        padding: 10px;
-        background-color: black;
-        width: 100%;
-        position: relative;
-        height: 30px;
-        margin-bottom: 0.3rem;
-    }
-    .inputs input{
-        padding: 5px;
-        font-size: 1rem;
-        width: 100%;
-        margin: 0;
-        text-transform: capitalize;
-        font-weight: bold;
-        background-color:#e4e8f0 ;
-    }
-    .text{
-        padding: 10px;
-        font-size: 1rem;
-        width: 350px;
-        margin: 0;
-        text-transform: capitalize;
-        font-weight: bold;
-        background-color:#e4e8f0 ;
-    } */
 }

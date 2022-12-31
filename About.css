@@ -105,104 +105,42 @@ header{
     margin: 3px;
     border-radius: 3px;
 }
-.sec{
-    background-image: url(./img/background.JPG);
-    background-size: 100vw;
-    background-attachment: scroll;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 90vh;
-    border: none;
-    padding: 0px 5%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: flex-start;
-    line-height: normal;
+main{
     position: relative;
-    top: 0rem;
-
+    top: 6rem;
+    bottom: 4rem;
 }
-.sec .phead{
+.about {
+    padding: 0 5%;
+    width: 100vw;
+    height: 5vh;
     font-size: 2rem;
-    line-height: normal;
-}
-.sec .phead + p{
-    margin-top: 0;
-    font-size: 1.2rem;
-    text-transform: capitalize;
-}
-.sec div button{
-    padding: 7px 15px;
-    font-size: 1.2rem;
-    margin-top: 2px;
-    background-color: #db0e0e;
-    border: none;
-    color: #f3f4f6;
-    box-shadow: 0px 0px 3px rgb(255, 0, 0,0.3);
-}
-.heading{
-    text-align: center;
-    margin-top: 4rem;
-    text-transform: capitalize;
-    font-size: 1.4rem;
-}
-.content{
-    padding: 20px 5%;
-}
-.products{
-    display: grid;
-    grid-template-columns: repeat(auto-fill,minmax(280px,1fr));
-    gap: 20px;
-    align-items: center;
-}
-.products .card{
-    height: 350px;
-    background: #f3f4f6;
-    box-shadow: 0px 0px 14px rgb(41, 39, 39, 0.3);
-}
-.img img{
-    width: 100%;
-    height: 180px;
-}
-.gender{
-    text-transform: capitalize;
-    font-size: 0.8rem;
-    padding: 0px 5%;
-    margin: 15px 0;
-}
-.product-type{
-    text-transform: capitalize;
-    font-size: 1rem;
-    padding: 0px 5%;
     font-weight: bold;
-}
-.description{
-    padding: 0px 5%;
+    color: #424144;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin: 35px 0;
+    align-items: center;
+    justify-content: flex-start;
+    height: 6rem;
+    background:#ff0844 ;
+    background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
 }
-.price{
-    text-transform: capitalize;
-    font-size: 1rem;
-    color: #db0e0e;
-    font-weight: bolder;
+.wel{
+    padding: 0 45% 0 5%;
+    line-height: 2rem;
 }
-.buy button{
-    text-transform: capitalize;
-    font-size: 0.8rem;
-    color: #db0e0e;
-    font-weight: bold;
-    border: 2px solid #db0e0e;
-    border-radius: 30px;
-    padding: 5px 8px;
+.wel h2 {
+    font: 1.5rem;
 }
-.buy button:hover{
-    color: #f3f4f6;
-    background: #db0e0e;
-    cursor:pointer;
+.wel h2 span {
+    font-size: 1.8rem;
+    text-transform: uppercase;
+}
+.sec {
+    padding: 0 45% 0 5%;
+    line-height: 2rem;
+}
+.sec h2{
+    font-size: 1.5rem;
 }
 footer{
     background: #f3f4f6;
@@ -211,7 +149,8 @@ footer{
 .footer-div{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding: 6rem 5% 0;
+    padding: 1rem 5% 0;
+    margin-top: 7rem;
 }
 .footer-section{
     display: grid;
@@ -316,9 +255,6 @@ footer .last p a{
     }
     nav :checked ~ .bar .div:nth-child(3){
         transform: translateY(-10px) rotate(-225deg);
-    }
-    main{
-        padding: 50px;
     }
     .footer-div{
         display: block;
